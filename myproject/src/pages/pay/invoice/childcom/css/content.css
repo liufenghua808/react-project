@@ -1,0 +1,74 @@
+.invoice{
+    margin-top:10px;
+    width: 1000px;
+    padding: 20px 20px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.inv-sec{
+    display:flex;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+}
+.inv-sec .inv1,.inv-sec .inv2{
+    width: 49%;
+}
+.inv-logo{
+    background:url('../../../../../images/logo-dark.png') no-repeat center center;
+    width: 184px;
+    height: 63px;
+    padding: 4px;
+    border: 1px solid #dee2e6;
+    border-radius: 3px;
+    margin-left: 0px;
+    margin-bottom: 30px;
+}
+.inv-inf{
+    text-align: right;
+    background:#fff;
+    color: #3e5569;
+    font-size: 28px;
+    height: 63px;
+    padding: 4px;
+    margin-bottom: 30px;
+}
+.inv1>p{
+    color:#3e5569;
+    font-size:16px;
+    font-weight: 400;
+}
+.inv2>p{
+    text-align: right;
+    color:#3e5569;
+    font-size:16px;
+    font-weight: 400;
+}
+
+/* 患者详情 */
+.patient-inf{
+    font-weight: 400;
+    color:#3cb371;
+    font-size: 20px;
+}
+
+.pat-sec{
+    display: flex;
+    justify-content:space-between;
+    overflow: hidden;
+}
+.pat{
+    padding-top: 10px;
+    width: 50%;
+    overflow: hidden; 
+}
+.pat>p{
+    color: #3e5569;
+    font-size: 16px;
+    font-weight: 400;
+}
+.pat>p>span{
+    font-weight: 900;
+}

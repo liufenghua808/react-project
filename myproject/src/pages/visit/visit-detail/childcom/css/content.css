@@ -1,0 +1,127 @@
+.detail {
+    width     : 1040px;
+    overflow  : hidden;
+    margin    : 0 auto;
+    margin-top: 10px;
+}
+
+
+.appoin-detail>table {
+    border       : none;
+    color        : #3e5569;
+    font-size    : 14px;
+    border-top   : solid 1px #dee2e6;
+    border-left  : solid 1px #dee2e6;
+
+}
+
+.appoin-detail>table>tbody>tr>td {
+    border       : none;
+    border-right : solid 1px #dee2e6;
+    border-bottom: solid 1px #dee2e6;
+    padding-left : 10px;
+}
+.appoin-detail>table>tbody>tr>td:nth-child(1){
+    font-weight: 600;
+    width: 16%;
+}
+
+
+/* del edit upload*/
+.visit-opr {
+    background: #fff;
+    width     : 100%;
+    overflow  : hidden;
+    margin    : 0 auto;
+    padding-left: 0px;
+    padding-left: 20px;
+}
+
+.visit-opr button {
+    float         : left;
+    height        : 40px;
+    width         : 140px;
+    border-radius : 3px;
+    border        : none;
+    margin-right  : 10px;
+    cursor        : pointer;
+    color         : #fff;
+    font-size     : 15px;
+    letter-spacing: 1px;
+}
+
+.visit-opr .del_btn {
+    background   : linear-gradient(to right, #FF4B2B, #FF416C);
+    margin-bottom: 20px;
+}
+
+
+.visit-opr .edit_btn {
+    background: linear-gradient(to right, #008761, #3CB371);
+}
+.visit-opr .del_btn:before {
+    content   : "\e605";
+    box-sizing: border-box;
+}
+
+.visit-opr .edit_btn:before {
+    content   : "\e61d";
+    box-sizing: border-box;
+}
+
+/* appoin */
+
+.appoin {
+    padding-top: 20px;
+    width      : 100%;
+    overflow   : hidden;
+    margin     : 0 auto;
+
+}
+
+.appoin .appoin-detail {
+    background    : #ffffff;
+    padding       : 0 20px;
+    padding-bottom: 40px;
+}
+
+.invo {
+    padding      : 10px 26px;
+    font-weight  : 400;
+    text-align   : center;
+    background   : #fff;
+    color        : #17a2b8;
+    border       : solid 1px #17a2b8;
+    border-radius: 3px;
+}
+
+.invo:hover {
+    color     : #fff;
+    background: #17a2b8;
+    cursor    : pointer;
+}
+
+.invo::before {
+    content      : "\e62a";
+    padding-right: 4px;
+}
+
+.pend,
+.canc,
+.suc {
+    font-size: 12px;
+    color    : #fff;
+    padding  : 3px 12px;
+}
+
+.pend {
+    background-color: #FFAA2A;
+}
+
+.canc {
+    background-color: #ef6e6e;
+}
+
+.suc {
+    background-color: #3CB371;
+}

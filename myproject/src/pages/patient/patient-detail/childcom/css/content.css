@@ -1,0 +1,169 @@
+.detail {
+    width     : 1040px;
+    overflow  : hidden;
+    margin    : 0 auto;
+    margin-top: 10px;
+}
+
+/* detail1 */
+.detail1 {
+    width   : 100%;
+    overflow: hidden;
+    margin  : 0 auto;
+}
+
+.detail1 div {
+    background: #ffffff;
+    padding   : 0 20px;
+    width     : 45.5%;
+}
+
+.detail1 .detail_card1 {
+    float: left;
+}
+
+.detail1 .detail_card2 {
+    float: right;
+}
+
+h3 {
+    color        : #3CB371;
+    font-weight  : 400;
+    border-bottom: solid 1px #eee;
+    height       : 50px;
+    line-height  : 50px;
+    font-size    : 22px;
+    margin-bottom: 20px;
+}
+
+.detail_card1>table,
+.detail_card2>table,
+.detai2_card1>table{
+    border       : none;
+    color        : #3e5569;
+    font-size    : 14px;
+    border-top   : solid 1px #dee2e6;
+    border-left  : solid 1px #dee2e6;
+    margin-bottom: 20px;
+
+}
+.detail_card2>table>thead>tr>th,
+.detai2_card1>table>thead>tr>th {
+    height        : 48px;
+    border        : none;
+    vertical-align: middle;
+    padding-left  : 10px;
+    border-right  : solid 1px #dee2e6;
+    border-bottom : solid 1px #dee2e6;
+}
+
+.detail_card1>table>tbody>tr>td,
+.detail_card2>table>tbody>tr>td,
+.detai2_card1>table>tbody>tr>td {
+    border       : none;
+    border-right : solid 1px #dee2e6;
+    border-bottom: solid 1px #dee2e6;
+    padding-left : 10px;
+}
+
+.detail_card1>table>tbody>tr>td:nth-child(1) {
+    width      : 30%;
+    font-weight: 900;
+}
+
+/* del edit upload*/
+.detail_card1 .detail1_btn {
+    margin-top  : 20px;
+    overflow    : hidden;
+    width       : 100%;
+    padding-left: 0px;
+}
+
+.detail_card1 .detail1_btn button {
+    float         : left;
+    height        : 40px;
+    width         : 100px;
+    border-radius : 3px;
+    border        : none;
+    margin-right  : 10px;
+    cursor        : pointer;
+    color         : #fff;
+    font-size     : 15px;
+    letter-spacing: 1px;
+}
+
+.detail1_btn .del_btn {
+    background   : linear-gradient(to right, #FF4B2B, #FF416C);
+    margin-bottom: 20px;
+}
+
+
+.detail1_btn .edit_btn {
+    background: linear-gradient(to right, #008761, #3CB371);
+}
+
+.detail1_btn .upload_btn {
+    background-color: #17a2b8;
+    border-color    : #17a2b8;
+}
+
+.detail1_btn .del_btn:before {
+    content   : "\e605";
+    box-sizing: border-box;
+}
+
+.detail1_btn .edit_btn:before {
+    content   : "\e61d";
+    box-sizing: border-box;
+}
+
+/* detail2 */
+
+.detail2 {
+    padding-top: 20px;
+    width      : 100%;
+    overflow   : hidden;
+    margin     : 0 auto;
+
+}
+
+.detail2 .detai2_card1 {
+    background    : #ffffff;
+    padding       : 0 20px;
+    padding-bottom: 40px;
+}
+
+.invo {
+    padding      : 10px 26px;
+    font-weight  : 400;
+    text-align   : center;
+    background   : #fff;
+    color        : #17a2b8;
+    border       : solid 1px #17a2b8;
+    border-radius: 3px;
+}
+
+.invo:hover {
+    color     : #fff;
+    background: #17a2b8;
+    cursor    : pointer;
+}
+
+.invo::before {
+    content: "\e62a";
+    padding-right: 4px;
+}
+.pend,.canc,.suc{
+    font-size: 12px;
+    color: #fff;
+    padding: 3px 12px;
+}
+.pend{
+    background-color: #FFAA2A;
+}
+.canc{
+    background-color: #ef6e6e;
+}
+.suc{
+    background-color: #3CB371;
+}

@@ -1,0 +1,459 @@
+.row-context {
+    width   : 1040px;
+    margin: 0 auto;
+    overflow: hidden;
+    ;
+}
+
+.table {
+    width           : 100%;
+    max-width       : 100%;
+    margin-bottom   : 1rem;
+    background-color: transparent;
+    border          : 1px solid #dee2e6;
+    border-collapse : collapse;
+}
+
+.table td,
+.table th {
+    padding: .75rem;
+    border : 1px solid #dee2e6;
+    padding: .75rem;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+.lochana-box-shadow,
+.widget-area-2 {
+    margin-top: 15px;
+}
+
+.navbar-default .ti-user,
+.navbar-default .ti-announcement,
+.navbar-default .ti-search {
+    background: rgba(0, 0, 0, .1);
+}
+
+.row>[class^=col] {
+    float              : left;
+    width              : 330px;
+    padding-top        : .5rem !important;
+    padding-bottom     : .5rem !important;
+    margin-right       : 25px;
+    /* background-color: #fff !important; */
+    border             : 0px !important;
+}
+.row>.col-md-4:nth-child(3){
+    margin-right: 0px;
+}
+
+.row1>[class^=col] {
+    float              : left;
+    width              : 500px;
+    padding-top        : .5rem !important;
+    padding-bottom     : .5rem !important;
+    margin-right       : 40px;
+    /* background-color: #fff !important; */
+    border             : 0px !important;
+}
+.row1>.col-md-6:nth-child(2){
+    margin-right: 0px;
+}
+.row2>[class^=col] {
+    float              : left;
+    width              : 1040px;
+    padding-top        : .5rem !important;
+    padding-bottom     : .5rem !important;
+    margin-right       : 10px;
+    /* background-color: #fff !important; */
+    border             : 0px !important;
+}
+
+.row3>[class^=col] {
+    float              : left;
+    width              : 500px;
+    padding-top        : .5rem !important;
+    padding-bottom     : .5rem !important;
+    margin-right       : 40px;
+    /* background-color: #fff !important; */
+    border             : 0px !important;
+}
+.row3>.col-md-6:nth-child(2){
+    margin-right: 0px;
+}
+
+@media (min-width: 992px) {
+    .row {
+        height         : 128px;
+        margin-top     : 20px;
+        width          : 1040px;
+        margin         : 0 auto;
+        /* margin-right: -5px;
+    margin-left        : -5px; */
+    }
+
+    .row1,
+    .row3 {
+        margin-top     : 20px;
+        width          : 1040px;
+        margin         : 0 auto;
+        /* margin-right: -5px;
+    margin-left        : -5px; */
+    }
+
+    .row2 {
+        margin-top     : 20px;
+        width          : 1040px;
+        margin         : 0 auto;
+        /* margin-right: -5px;
+    margin-left        : -5px; */
+    }
+
+    .row .row {
+        margin-right: -10px;
+        margin-left : -10px;
+    }
+
+    .dataTables_wrapper .row {
+        margin-right: 0px;
+        margin-left : 0px;
+    }
+
+    .lochana-grid .row {
+        margin-right: 0px;
+        margin-left : 0px;
+    }
+
+    .card.card-no-border {
+        margin-top: 20px;
+    }
+}
+
+
+.widget-area {
+    height       : 130px;
+    background   : #fff;
+    border-radius: 2px;
+}
+
+.widget-area .numeric {
+    font-size     : 30px;
+    letter-spacing: 1px;
+}
+
+h4.wiget-title {
+    font-size     : 13px;
+    letter-spacing: .5px;
+}
+
+.lochana-box-shadow {
+    border-radius     : 0;
+    border            : 0;
+    -webkit-box-shadow: 0 0 0 1px #dce3ec, 0 8px 16px 0 #dce3ec;
+    box-shadow        : 0 0 0 1px #dce3ec, 0 8px 16px 0 #dce3ec;
+    background        : #fff;
+    margin-top        : 20px;
+}
+
+.lochana-box-shadow2 {
+    border-radius     : 0;
+    border            : 0;
+    -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow        : 0 0px 10px rgba(0, 0, 0, 0.1);
+    background        : #fff;
+}
+
+
+.widget-left {
+    width         : 30%;
+    display       : inline-block;
+    vertical-align: 22px;
+    font-size     : 30px;
+    text-align    : center;
+}
+
+.widget-left [class^="ti-"],
+.widget-left [class*=" ti-"] {
+    padding      : 17px;
+    background   : #fff;
+    border-radius: 50%;
+    border       : 1px solid;
+}
+
+.widget-right {
+    width  : 62%;
+    display: inline-block;
+    padding: 20px 0;
+}
+
+.widget-area-2 {
+    background    : #fff;
+    margin-top    : 1rem;
+    padding       : 20px;
+    padding-bottom: 2px;
+    border-radius : 2px;
+}
+
+.widget-title {
+    font-size     : 22px;
+    padding-bottom: .5rem;
+    margin-bottom : 15px;
+    border-bottom : 1px solid #eeeeee;
+}
+
+.widget-area {
+    height       : 130px;
+    background   : #fff;
+    border-radius: 2px;
+}
+
+.widget-area .numeric {
+    font-size     : 30px;
+    letter-spacing: 1px;
+}
+
+h4.wiget-title {
+    font-size     : 13px;
+    letter-spacing: .5px;
+}
+
+.widget-morris {
+    padding: 20px;
+}
+
+#donutMorris text tspan {
+    font-weight: 100 !important;
+    font-size  : 10px;
+}
+
+.color-yellow {
+    color: #FF7D00;
+}
+
+.color-green {
+    color: #3CB371
+}
+
+.color-red {
+    color: #E57498;
+}
+
+.color-blue {
+    color: #40AAFF;
+}
+
+
+
+h3.block-title {
+    background: transparent;
+    margin    : 4px auto;
+    color     : #E7F3ED;
+}
+
+.widget-area {
+    height       : 130px;
+    background   : #fff;
+    border-radius: 2px;
+}
+
+.widget-area .numeric {
+    font-size     : 30px;
+    letter-spacing: 1px;
+}
+
+h4.wiget-title {
+    font-size     : 13px;
+    letter-spacing: .5px;
+}
+
+.alert {
+    border-radius: 0px;
+    border       : 0px;
+}
+
+.alert-dismissible .close {
+    top          : 10px;
+    right        : 10px;
+    padding      : 0px 6px;
+    border       : 1px solid;
+    border-radius: 50%;
+}
+
+.alert-warning {
+    color: #F15044;
+}
+
+.inc-dec {
+    font-size: 12px;
+}
+
+.inc-dec .ti-angle-up {
+    color: green;
+}
+
+.inc-dec .ti-angle-down {
+    color: red;
+}
+
+.widget-left {
+    width         : 30%;
+    display       : inline-block;
+    vertical-align: 22px;
+    font-size     : 30px;
+    text-align    : center;
+}
+
+.widget-left [class^="ti-"],
+.widget-left [class*=" ti-"] {
+    padding      : 17px;
+    background   : #fff;
+    border-radius: 50%;
+    border       : 1px solid;
+}
+
+.widget-right {
+    width  : 62%;
+    display: inline-block;
+    padding: 20px 0;
+}
+
+.widget-area-2 {
+    background    : #fff;
+    margin-top    : 1rem;
+    padding       : 20px;
+    padding-bottom: 2px;
+    border-radius : 2px;
+}
+
+.widget-title {
+    font-size     : 22px;
+    padding-bottom: .5rem;
+    margin-bottom : 15px;
+    border-bottom : 1px solid #eeeeee;
+}
+
+.widget-morris {
+    padding: 20px;
+}
+
+#donutMorris text tspan {
+    font-weight: 100 !important;
+    font-size  : 10px;
+}
+
+
+/*=======================
+ 	Charts
+====================== */
+.chart-home {
+    height       : 255px;
+    margin-bottom: 10px;
+}
+
+.chart-one {
+    height: 300px;
+}
+
+.chart-two {
+    height: 260px;
+}
+
+.chart-three {
+    height: 400px;
+}
+
+.visit-quality {
+    color: #5867c3;
+}
+
+.visit-price {
+    color: #00c5dc;
+}
+
+/*=======================
+ 	Tables
+====================== */
+
+.widget-area-2 .table-div {
+    padding: 0px;
+}
+
+.lochana-widget {
+    margin-bottom: 20px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(61, 79, 90, .03);
+}
+
+.table .custom-control.custom-checkbox {
+    padding-left: 0;
+}
+
+table.table tbody td,
+table.table thead th {
+    font-size: 14px;
+}
+
+table.dataTable th:first-child {
+    width: 20px;
+}
+
+.pagination .page-link [class^="ti-"],
+.pagination .page-link [class*=" ti-"] {
+    margin-right: 10px;
+}
+
+.export-pagination.pagination .page-link {
+    color: #555555;
+}
+
+/*=======================
+ 	Icons
+====================== */
+
+.font-awesome-row .icon-container {
+    width: 30%;
+}
+
+.icon-section {
+    padding-left: 0px;
+}
+
+.icon-container {
+    width         : 220px;
+    padding-bottom: 1em;
+    display       : inline-block;
+}
+
+.icon-name {
+    color      : #666;
+    margin-left: 15px;
+    font-size  : .8em;
+    transition : .3s;
+}
+
+
+.badge {
+    padding      : 4px 10px;
+    border-radius: 5%;
+    font-weight  : 400;
+    font-size    : 14px;
+}
+
+
+.badge-danger,
+.bg-danger {
+    background-color: #ef6e6e !important;
+}
+
+.badge-success,
+.bg-success {
+    background-color: #3CB371 !important;
+}
+
+.badge-warning,
+.bg-warning {
+    color           : #fff;
+    background-color: #FFAA2A !important;
+}

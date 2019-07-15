@@ -1,0 +1,30 @@
+footer {
+
+    height: 60px;
+    width : 1040px;
+
+}
+
+footer>p {
+    color      : #6c757d;
+    font-size  : 16px;
+    text-align : center;
+    line-height: 60px;
+    font-weight: 400;
+}
+
+
+.badge {
+    padding      : .4em .7em;
+    border-radius: 0;
+    font-weight  : 400;
+}
+
+.progress {
+    border-radius: 0;
+    margin       : 10px 0px 15px;
+}
+
+.progress-bar {
+    opacity: 0.6;
+}

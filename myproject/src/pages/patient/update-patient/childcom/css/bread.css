@@ -1,0 +1,28 @@
+
+
+.divStyle{
+  width: 1000px;
+  height: 44px;
+  padding: 5px 20px;
+  background: linear-gradient(to left, #414345, #3e5569)
+}
+
+.bt{
+  width: 50%;
+  height: 36px;
+  line-height: 44px;
+  color: #fff;
+  float: left;
+  font-weight: 400;
+}
+.breStyle{
+  height: 36px;
+  line-height: 44px;
+  float: right;
+  color: #fff;
+  font-size:14px;
+}
+.fontcolor {
+  color: #fff;
+  line-height: 44px;
+}
