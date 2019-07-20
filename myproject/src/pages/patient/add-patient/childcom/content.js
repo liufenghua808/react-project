@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './css/content.css';
+import * as actions from '../../../../store/actions';
+import { connect } from 'react-redux';
+import { mapStateToProps_patient } from '../../../../store/setmapstateprops';
+
 
 class Content extends Component {
     constructor(props) {
@@ -9,6 +13,12 @@ class Content extends Component {
 
     handleChange=(event)=>{
         this.setState({ value: event.target.value });
+    }
+
+
+    subFn=()=>{
+        let {patientadd} =this.props;
+        patientadd('zhangsan23',222,'123434@');
     }
 
  
@@ -71,11 +81,12 @@ class Content extends Component {
                 </div>
                 {/* 提交 */}
                 <div className='add_subm'>
-                    <button className='add_btn' type='submit'>提交</button>
+                    <button className='add_btn' type='submit' onClick={this.subFn}>提交</button>
                 </div>
             </div>
         );
     }
 }
 
-export default Content;
+
+export default connect(mapStateToProps_patient, actions)(Content);

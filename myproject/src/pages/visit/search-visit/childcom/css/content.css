@@ -165,7 +165,7 @@ tr:nth-of-type(odd) {
 
 /* pagination */
 .pagination{
-    margin-top: 8px;
+    margin-top: 40px;
     overflow: hidden;
     height: 40px;
     line-height: 40px

@@ -20,18 +20,22 @@ class Content extends Component {
     fillstate(sta) {
         switch (sta) {
             case 0:
-                return "已完成"
+                return "已完成";
             case 1:
-                return "取消"
+                return "取消";
             case 2:
-                return "等待"
+                return "等待";
+            default:
+                return;
         }
     }
     render() {
 
         console.log(this.props);
-        let { data } = this.props;
+        let { data, onecheck, allcheck } = this.props;
         let list = '';
+        let all = false;
+        console.log(data)
         if (data.length) {
             list = data.map((item, index) => {
                 let classSta = '';
@@ -42,11 +46,14 @@ class Content extends Component {
                 } else if (item.newstatus === 2) {
                     classSta = 'pending'
                 }
+
                 return (
-                    <tr className={index % 2 ? "even" : "odd"}>
+
+                    <tr  key={index} className={index % 2 ? "even" : "odd"}>
                         <td className="tcontrol">
-                            <input type="checkbox" id="tawesome1" />
-                            <label htmlFor="tawesome1"></label>
+                            <input
+                                type="checkbox" id={index} checked={item.checked} onChange={() => { onecheck(index) }} />
+                            <label htmlFor={index}></label>
                         </td>
                         <td >{item.id}</td>
                         <td>{item.name}</td>
@@ -58,8 +65,11 @@ class Content extends Component {
                     </tr>
                 )
             })
+
         }
 
+        //每项被选中时，默认全选被选中
+        //all = data.every(item => item.checked === true)
 
         return (
             <div className="content">
@@ -92,7 +102,7 @@ class Content extends Component {
                     <thead>
                         <tr className="odd">
                             <th className="tcontrol">
-                                <input type="checkbox" id="tawesome" />
+                                <input type="checkbox" id="tawesome" checked={all} onChange={(ev) => { allcheck(ev.target.checked) }} />
                                 <label htmlFor="tawesome"></label>
                             </th>
                             <th>病人ID</th>

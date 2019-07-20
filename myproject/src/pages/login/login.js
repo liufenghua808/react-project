@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as actions from '../../store/actions';
+import {NavLink} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { mapStateToProps } from '../../store/setmapstateprops';
 import './login.css';
@@ -18,19 +19,22 @@ class Login extends Component {
 
     //获取用户名和密码
     loginFn = () => {
-        let { login } = this.props;
+        let { login} = this.props;
         let { user, pw } = this.refs;
         console.log(this.refs.user.value,this.refs.pw.value)
         login(user.value, pw.value)
-        .then(()=>{
-
+        .then((d)=>{
+            if(d.code===0){
+                alert(d.msg);
+                //setcookie();
+            }
+             
         }).catch((err)=>{
             console.log(err)
-            alert('用户名或密码错误');
         });
     }
     componentDidMount() {
-        this.props.getcookie();
+       // this.props.getcookie();
         let { loginonOff, history } = this.props;
         if (loginonOff) {
             history.push('/home');
@@ -55,13 +59,14 @@ class Login extends Component {
                     <div className="ipt">
                         <input 
                             className="iptbg" 
-                            placeholder="Username" 
+                            type="text"
+                            placeholder="USER"
                             ref="user"
                         />
                         <input 
                             className="iptbg" 
                             type="password" 
-                            placeholder="Password"   
+                            placeholder="PASSWORD"  
                             ref="pw" 
                         />
                     </div>
@@ -73,21 +78,19 @@ class Login extends Component {
 
                     <div className="btnsubmit">
                             <input 
-                                className="btn" 
+                                className="loginbtn" 
                                 type="button"
                                 value="Login"
                                 onClick={this.loginFn}
-                            />
-                            
-                            
-
+                            />     
 
                     </div>
 
 
                     <div>
                         <small>New User,
-                        sign up Here</small>
+                        <NavLink to="/sign-up">sign up</NavLink> Here
+                        </small>
                     </div>
 
 
