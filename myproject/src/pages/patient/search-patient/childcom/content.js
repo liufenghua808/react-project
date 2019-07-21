@@ -5,14 +5,30 @@ import './css/content.css';
 import * as actions from '../../../../store/actions';
 import { connect } from 'react-redux';
 import { mapStateToProps_patient } from '../../../../store/setmapstateprops';
+import axios from 'axios';
 
 class Content extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+         
+        }
+    }
+    //判断通过cookie判断是否登陆状态
+    route_cookie() {
+        axios.get('/setcookie').then(d => {
+            if (d.data.code === 0) {
+                console.log(d.data.msg)
+            } else {
+                console.log(d.data.msg)
+            }
+
+        })
     }
 
+
     componentDidMount() {
+        this.route_cookie();
         let { getDate } = this.props;
         getDate('/patient/list');//获得病人信息
 
@@ -33,6 +49,7 @@ class Content extends Component {
 
         console.log(this.props);
         let { data, onecheck, allcheck } = this.props;
+        
         let list = '';
         let all = false;
         console.log(data)
@@ -55,11 +72,11 @@ class Content extends Component {
                                 type="checkbox" id={index} checked={item.checked} onChange={() => { onecheck(index) }} />
                             <label htmlFor={index}></label>
                         </td>
-                        <td >{item.id}</td>
+                        <td >{index+1}</td>
                         <td>{item.name}</td>
                         <td>{item.age}</td>
                         <td >{item.telephone}</td>
-                        <td>{item.lastvisit}</td>
+                        <td>{item.email}</td>
                         <td><span className={classSta}>{this.fillstate(item.newstatus)}</span></td>
 
                     </tr>
@@ -69,7 +86,7 @@ class Content extends Component {
         }
 
         //每项被选中时，默认全选被选中
-        //all = data.every(item => item.checked === true)
+        all = data.every(item => item.checked === true)
 
         return (
             <div className="content">
@@ -109,7 +126,7 @@ class Content extends Component {
                             <th>病人姓名</th>
                             <th>年龄</th>
                             <th>电话</th>
-                            <th>上次访问</th>
+                            <th>邮箱</th>
                             <th>状态</th>
 
                         </tr>

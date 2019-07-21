@@ -44,7 +44,7 @@ h3 {
     padding-bottom: 10px;
 }
 
-input,.sex {
+input,.sex,.newstatus {
     padding-left : 10px;
     height       : 46px;
     width        : 480px;
@@ -54,7 +54,7 @@ input,.sex {
     border       : 1px solid #ced4da;
     border-radius: 3px;
 }
-.sex{
+.sex,.newstatus{
     height       : 50px;
     width        : 492px;
 }

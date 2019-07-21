@@ -20,12 +20,26 @@ conn.on('connected', () => {
 
 
     //用户注册登陆
-    app.use('*',(req,res,next)=>{
+    app.use('*', (req, res, next) => {
         req.Session = Session;
         next();
     })
     //找cookie
-   // app.use('/setcookie', require('./routers/user/user_setcookie_router'));
+    // app.use('/setcookie', require('./routers/user/user_setcookie_router'));
+    app.get('/setcookie', (req, res) => {
+       
+        let obj = req.Session.find(item => item.user === req.cookies.user);
+       
+        if (obj) {
+            res.json({ code: 0, msg: '您目前已经处于登陆状态：' })
+        } else {
+            res.json({ code: 1, msg: '请前往登录' })
+
+        }
+    })
+
+
+
 
     // 用户登陆接口 /login
     app.use('/login', require('./routers/user/user_login_router'));
@@ -33,13 +47,13 @@ conn.on('connected', () => {
     //用户注册接口
     app.use('/signup', require('./routers/user/user_signup_router'));
 
-    
+
 })
 
 //获取病人信息
-app.use('/patient/list',require('./routers/patient/patient_list_router'));
+app.use('/patient/list', require('./routers/patient/patient_list_router'));
 
-app.use('/patient/add',require('./routers/patient/patient_add_router'));
+app.use('/patient/add', require('./routers/patient/patient_add_router'));
 
 
 app.listen(80, () => {

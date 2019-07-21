@@ -16,9 +16,12 @@ export default function (state = {
 
         //勾选复选框
         case actionTypes.ONECHECK:
+            
             let obj = o.data.find(item => +item.id === action.id);
+            console.log(obj)
             if (obj) {
                 obj.checked = !obj.checked;
+                console.log(obj);
             }
             console.log(o)
             return o;

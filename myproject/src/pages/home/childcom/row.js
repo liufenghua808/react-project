@@ -2,12 +2,20 @@ import React, { Component } from 'react';
 // import './bootstrap.min.css';
 //import './css/styles.css';
 import './css/row.css';
+import * as actions from '../../../store/actions';
+import { connect } from 'react-redux';
+import { mapStateToProps_patient} from '../../../store/setmapstateprops';
+
 
 class Row extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {}
 	}
+
+	
+
+
 	render() {
 		return (
 			<div className="row-context">
@@ -227,5 +235,4 @@ class Row extends Component {
 		);
 	}
 }
-
-export default Row;
+export default connect(mapStateToProps_patient, actions)(Row);

@@ -4,12 +4,12 @@ import './css/content.css';
 class Content extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = { sexs: '男', newstatus: '2'}
     }
 
-    // onChange = (ev) => {
-    //     ev.target.checked = !ev.target.checked
-    // }
+    handleChange = (event) => {
+        this.setState({ value: event.target.value });
+    }
 
 
 
@@ -34,10 +34,9 @@ class Content extends Component {
                     </div>
                     <div className='piece-right'>
                         <p>性别</p>
-                        {/* <input type='text' placeholder="性别" /> */}
-                        <select className="sex">
-                            <option selected>男</option>
-                            <option >女</option>
+                        <select className="sex" value={this.state.sexs} ref="sex" onChange={this.handleChange}>
+                            <option value="男">男</option>
+                            <option value="女">女</option>
                         </select>
                     </div>
                 </div>
@@ -52,6 +51,17 @@ class Content extends Component {
                     </div>
                 </div>
                 <div className="title">
+                    <div className='piece-left'>
+                        <p>状态</p>
+                        <select className="newstatus" value={this.state.newstatus} ref="sex" onChange={this.handleChange}>
+                            <option value='0'>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div className="title">
                     <div className='adress'>
                         <p>地址</p>
                         <textarea type='text' placeholder="地址" />
@@ -64,10 +74,10 @@ class Content extends Component {
                         <input className='fileload' type='file' placeholder="地址" />
                     </div>
                 </div>
-                <div class="control">
+                <div className="control">
                     <span>**</span>
                     <input type="checkbox" id="awesome" />
-                    <label for="awesome">请确认修改信息</label>
+                    <label htmlFor="awesome">请确认修改信息</label>
                 </div>
                 <div className='add_subm'>
                     <button className='add_btn' type='submit'>更新</button>

@@ -27,8 +27,7 @@ class Login extends Component {
             if(d.code===0){
                 alert(d.msg);
                 //setcookie();
-            }
-             
+            }          
         }).catch((err)=>{
             console.log(err)
         });

@@ -6,10 +6,12 @@ const router = express.Router();
 router.get('/',(req,res)=>{
     let obj = req.Session.find(item=>item.user === req.cookies.name);
     //{maxAge: 12000}
+    console.log(Session)
+    console.log(obj)
     if(obj){
-        res.json({code:0,msg:obj})
+        res.json({code:0,msg:'您目前已经处于登陆状态：'})
     }else{
-        res.json({code:1,msg:'请登录'})
+        res.json({code:1,msg:'请前往登录'})
        
     }
 }
@@ -18,7 +20,7 @@ router.get('/',(req,res)=>{
 
 
 
-// (req, res, next) => {
+// router.get('/',(req, res, next) => {
 //     let cookie = req.cookies.user;
 //     let obj = {};
 //     if (!cookie) {

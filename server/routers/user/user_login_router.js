@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
         console.log(data);
         if (data) {
             //设置session
-            res.cookie("user", data.user, { maxAge: 1000000 });
+            res.cookie("user", data.user,{maxAge: 100000000});
             req.Session.push({
                 user: data.user,
                 level: data.level,

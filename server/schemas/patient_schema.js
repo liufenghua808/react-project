@@ -66,7 +66,7 @@ const patientSchema = new mongoose.Schema({
         type: String
     },
     name: {
-        default:false,
+        default:true,
         type: String
     },
     age: {
@@ -77,6 +77,11 @@ const patientSchema = new mongoose.Schema({
         default: false,
         type: String
     },
+    sex:{
+        default: false,
+        type: String
+    }
+    ,
     telephone: {
         default: false,
         type: String
@@ -85,7 +90,7 @@ const patientSchema = new mongoose.Schema({
         default: false,
         type: String
     },
-    arddress: {
+    address: {
         default: false,
         type: String
     },
@@ -93,13 +98,13 @@ const patientSchema = new mongoose.Schema({
         default: false,
         type: String
     },
-    lastvisit: {
-        default: false,
-        type: String
-    },
+    // lastvisit: {
+    //     default: false,
+    //     type: String
+    // },
     newstatus: {
         default: false,
-        type: String
+        type: Number
     },
     checked: {
         default: false,
