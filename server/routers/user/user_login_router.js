@@ -8,7 +8,7 @@ const UserModel = require('../../models/uesr_model');
 //登陆接口
 router.post('/', (req, res) => {
     let { user, pass } = req.body;
-    console.log(UserModel)
+   
     UserModel.findOne({ user, pass }, { pass: 0 }, (err, data) => {
        
         if (err) {
@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
             })
             return;
         };
-        console.log(data);
+        //console.log(data);
         if (data) {
             //设置session
             res.cookie("user", data.user,{maxAge: 100000000});

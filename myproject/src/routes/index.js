@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import React, { Component } from 'react';
 import routeConfig from './route_config';
 // import axios from 'axios';
+// import Login from '../pages/login/login'
 
 function renderRoutes(routeConfig) {
     return routeConfig.map((item, i) => {
@@ -11,6 +12,18 @@ function renderRoutes(routeConfig) {
                 {...{
                     key: i,
                     component: item.component,
+                    // render: (props) => {
+                    //     axios.get('/setcookie').then(d => {
+                    //         if (d.data.code === 0) {
+                    //             console.log(d.data.msg)
+                    //             return(<item.component {...props} />)
+                    //         } else {
+                    //             return <Login />
+                    //         }
+
+                    //     })
+                    // },
+
                     path: item.path,
                     exact: item.exact || false
                 }}
@@ -28,14 +41,13 @@ class App extends Component {
     //     axios.get('/setcookie').then(d => {
     //         if (d.data.code === 0) {
     //             console.log(d.data.msg)
+               
     //         } else {
     //             console.log(d.data.msg)
     //         }
 
     //     })
     // }
-
-    
 
     // componentDidMount() {
     //     this.route_cookie();

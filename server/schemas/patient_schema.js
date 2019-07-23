@@ -61,10 +61,7 @@ const mongoose = require('mongoose');
 
 //创建骨架
 const patientSchema = new mongoose.Schema({
-    num: {
-        //required: true,
-        type: String
-    },
+    
     name: {
         default:true,
         type: String
@@ -98,18 +95,12 @@ const patientSchema = new mongoose.Schema({
         default: false,
         type: String
     },
-    // lastvisit: {
-    //     default: false,
-    //     type: String
-    // },
+    
     newstatus: {
         default: false,
         type: Number
     },
-    checked: {
-        default: false,
-        type: Boolean
-    }
+    
 });
 
 module.exports = patientSchema;

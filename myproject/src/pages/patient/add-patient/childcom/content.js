@@ -4,6 +4,7 @@ import * as actions from '../../../../store/actions';
 import { connect } from 'react-redux';
 import { mapStateToProps_patient } from '../../../../store/setmapstateprops';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 class Content extends Component {
     constructor(props) {
@@ -17,9 +18,15 @@ class Content extends Component {
 
 
     subFn = () => {
-        let { patientadd } = this.props;
+        console.log(this.props)
+        let { patientadd,history} = this.props;
         let { name, birthday, age, sex, email, telephone, newstatus,address, file } = this.refs;
-        patientadd(name.value, birthday.value, age.value, sex.value, email.value, telephone.value,newstatus.value, address.value, file.value);
+        patientadd(name.value, birthday.value, age.value, sex.value, email.value, telephone.value,newstatus.value, address.value, file.value)
+        .then(d=>{
+           if(d.code===0){
+            history.push('/search-patient');
+           }
+        });
     }
 
     //判断通过cookie判断是否登陆状态
@@ -34,19 +41,13 @@ class Content extends Component {
         })
     }
 
-
-
     componentDidMount() {
         this.route_cookie();
 
     }
 
-    componentDidUpdate() {
-        let { loginonOff, history } = this.props;
-        if (loginonOff) {
-            history.push('/search-patient');
-        }
-    }
+   
+
 
     render() {
         return (
@@ -88,7 +89,7 @@ class Content extends Component {
                 <div className="title">
                     <div className='piece-left'>
                         <p>状态</p>
-                        <select className="newstatus" ref="newstatus" value={this.state.newstatus} ref="sex" onChange={this.handleChange}>
+                        <select className="newstatus" ref="newstatus" value={this.state.newstatus} onChange={this.handleChange}>
                             <option value='0'>0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -126,4 +127,6 @@ class Content extends Component {
 }
 
 
-export default connect(mapStateToProps_patient, actions)(Content);
+export default withRouter(
+    connect(mapStateToProps_patient, actions)(Content)
+);

@@ -73,13 +73,13 @@ export function getAction(data) {
     }
 }
 
-//给组件调用的
+//查询病人信息
 export function getDate(url) {
     return function (dispatch, getState) {
         return new Promise((resolve, reject) => {
             getPatient(url).then(d => {
                 if (d.code === 0) {
-                    //后台返回数据基础上前台新增数据
+                    //后台返回数据基础上前端新增自己需要的数据
                     d.data.forEach((element, index) => {
                         element.id = index
                         element.checked = false;
@@ -97,9 +97,9 @@ export function getDate(url) {
 }
 
 //添加病人信息
-export function patientadd(name, birthday, age, sex, email, telephone, address, file) {
+export function patientadd(name, birthday, age, sex, email, telephone,newstatus, address, file) {
+
     return function (dispatch, getState) {
-        console.log(123);
         return postuser('/patient/add', {
             name,
             birthday,
@@ -107,11 +107,12 @@ export function patientadd(name, birthday, age, sex, email, telephone, address, 
             sex,
             email,
             telephone,
+            newstatus,
             address,
             file
         }).then(d => {
             if (d.code === 0) {
-                console.log(d);
+                console.log(d.msg);
                 return Promise.resolve(d)
             } else {
                 alert(d.msg)
@@ -139,3 +140,5 @@ export function allcheck(ischeck) {
         checked: ischeck
     }
 }
+
+//删除

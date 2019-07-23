@@ -6,6 +6,7 @@ import * as actions from '../../../../store/actions';
 import { connect } from 'react-redux';
 import { mapStateToProps_patient } from '../../../../store/setmapstateprops';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 class Content extends Component {
     constructor(props) {
@@ -29,9 +30,7 @@ class Content extends Component {
 
     componentDidMount() {
         this.route_cookie();
-        let { getDate } = this.props;
-        getDate('/patient/list');//获得病人信息
-
+       
     }
     fillstate(sta) {
         switch (sta) {
@@ -46,13 +45,12 @@ class Content extends Component {
         }
     }
     render() {
-
-        console.log(this.props);
+   
         let { data, onecheck, allcheck } = this.props;
         
         let list = '';
         let all = false;
-        console.log(data)
+
         if (data.length) {
             list = data.map((item, index) => {
                 let classSta = '';
@@ -85,6 +83,7 @@ class Content extends Component {
 
         }
 
+        console.log(data)
         //每项被选中时，默认全选被选中
         all = data.every(item => item.checked === true)
 
@@ -170,4 +169,4 @@ class Content extends Component {
     }
 }
 
-export default connect(mapStateToProps_patient, actions)(Content);
+export default withRouter(connect(mapStateToProps_patient, actions)(Content));

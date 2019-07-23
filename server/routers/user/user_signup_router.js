@@ -6,10 +6,10 @@ const UserModel = require('../../models/uesr_model');
 //注册接口
 router.post('/', (req, res) => {
 
-    let {  user, pass,email } = req.body;
-    console.log(user, pass,email,);
+    let {  user, pass,email } = req.body;  //注意：一般注册以手机号或者邮箱为准进行注册查找
+    console.log(user, pass,email,);  
    
-        UserModel.findOne({ user }, (error, data) => {
+        UserModel.findOne({ user},{pass:0}, (error, data) => {
             console.log(data)
             if (error) {
                 res.json({ code: 1, msg: '注册失败' })

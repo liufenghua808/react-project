@@ -3,14 +3,17 @@ import './nav.css';
 import { NavLink } from 'react-router-dom';
 import * as actions from '../../store/actions';
 import { connect } from 'react-redux';
-import { mapStateToProps } from '../../store/setmapstateprops';
+import { mapStateToProps_patient } from '../../store/setmapstateprops';
 
 class Nav extends Component {
     state = {
 
     };
    
-
+    search_patient=()=>{
+        let { getDate } = this.props;
+        getDate('/patient/list');//获得病人信息
+    }
 
     render() {
 
@@ -38,7 +41,7 @@ class Nav extends Component {
                             <NavLink to='/add-patient'>添加病人信息</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/search-patient' >查看病人信息</NavLink>
+                            <NavLink to='/search-patient'  onClick={this.search_patient}>查看病人信息</NavLink>
                         </li>
                         <li>
                             <NavLink to='/patient-detail'>病人详情</NavLink>
@@ -130,4 +133,4 @@ class Nav extends Component {
     }
 }
 
-export default connect(mapStateToProps,actions)(Nav);
+export default connect(mapStateToProps_patient,actions)(Nav);

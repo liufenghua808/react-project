@@ -26,7 +26,8 @@ class Login extends Component {
         .then((d)=>{
             if(d.code===0){
                 alert(d.msg);
-                //setcookie();
+                let { getDate } = this.props;
+                getDate('/patient/list');//获得病人信息
             }          
         }).catch((err)=>{
             console.log(err)

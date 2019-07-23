@@ -21,9 +21,8 @@ export default function (state = {
             console.log(obj)
             if (obj) {
                 obj.checked = !obj.checked;
-                console.log(obj);
             }
-            console.log(o)
+           // console.log(o)
             return o;
 
         //全选勾选
